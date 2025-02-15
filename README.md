@@ -8,7 +8,7 @@
 ## 실행 가이드
 
 1. git clone <br/>
-2. npm i (터미널에서) <br/>
+2. npm i <br/>
 3. npm start <br/>
 
 ### sample_id
