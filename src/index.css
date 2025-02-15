@@ -1,0 +1,710 @@
+/* div {
+  outline: 1px solid black;
+} */
+
+p {
+  margin: 5px;
+  padding: 0;
+}
+
+#login,
+#join {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  min-height: 500px;
+}
+
+#list,
+#write,
+#edit,
+#read {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  min-height: 800px;
+}
+
+#login .wrap,
+#join .wrap {
+  width: 400px;
+}
+
+#list .wrap {
+  width: 800px;
+}
+
+#write .wrap,
+#edit .wrap,
+#read .wrap,
+#read,
+#edit {
+  width: 600px;
+}
+
+
+#login .title,
+#join .title,
+#list .title,
+#write .title,
+#edit .title,
+#read .title {
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: 40px;
+  color: #1a2c5f;
+  font-weight: bold;
+}
+
+
+/* 종합 설정 */
+
+#login form p,
+#join form p {
+  margin: 0;
+  padding-left: 5px;
+  margin-top: 15px;
+}
+
+#login form input,
+#join form input {
+  width: 100%;
+  height: 48px;
+  margin-top: 5px;
+  padding: 0 10px;
+  border: 1px solid #ddd;
+  outline: none;
+  border-radius: 10px;
+  background: #fff;
+  line-height: 48px;
+  font-size: 18px;
+  box-sizing: border-box;
+}
+
+#login form input::placeholder,
+#join form input::placeholder {
+  color: #aaa;
+  font-size: 14px;
+}
+
+#login form button,
+#join form button {
+  border: 1px solid #1a2c5f;
+  border-radius: 10px;
+  line-height: 50px;
+  background: #1a2c5f;
+  font-size: 18px;
+  color: #fff;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 20px;
+}
+
+#join form button.disabled {
+  background: #aaa;
+  border: 1px solid #aaa;
+}
+
+#login .joinBtn {
+  font-size: 18px;
+  color: #1a2c5f;
+  text-align: center;
+  margin-top: 15px;
+}
+
+#login .joinBtn a {
+  text-decoration: none;
+  color: inherit;
+  border-bottom: 1px solid #1a2c5f;
+}
+
+#join a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 30px;
+}
+
+#join .usernameError,
+#join .passwordError,
+#join .confirmPasswordError {
+  font-size: 13px;
+  margin: 5px;
+  color: rgb(250, 88, 88);
+}
+
+/* 로그인 및 회원가입 폼 */
+
+#list .wrap .box0 .inner1 .timer{
+  display: flex;
+}
+
+#list .wrap .box0 .inner1 .name{
+  display: flex;
+  justify-content: space-between;
+}
+
+#list .wrap .box0 .inner1 .timer .timerBtn{
+  margin-left: 10px;
+  border: 1px solid #1a2c5f;
+  border-radius: 10px;
+  font-size: 14px;
+  width: 70px;
+  text-align: center;
+  cursor: pointer;
+}
+
+#list .wrap .box0 .inner1 .logout{
+  border: 1px solid #1a2c5f;
+  border-radius: 10px;
+  font-size: 14px;
+  width: 70px;
+  text-align: center;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+#list .wrap .box0 .inner1 .timer .timerBtn:hover,
+#list .wrap .box0 .inner1 .logout:hover{
+  background-color: #1a2c5f;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+#list .wrap .box1,
+#list .wrap .box2 {
+  width: 800px;
+}
+
+#list .wrap .box1,
+#list .wrap .box2 .box2Inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+#list .wrap .top {
+  background-color: #1a2c5f;
+  border: 1px solid #1a2c5f;
+  border-radius: 15px 15px 0px 0px;
+  color: white;
+  font-size: 16px;
+  height: 35px;
+  width: 300px;
+  text-align: center;
+  align-content: center;
+}
+
+#list .wrap .userInfo {
+  border-bottom: 1px solid #cccccc;
+  border-right: 1px solid #cccccc;
+  border-left: 1px solid #cccccc;
+  border-radius: 0px 0px 10px 10px;
+  height: 70px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+#list .wrap .box1 {
+  background-color: #1a2c5f;
+  border: 1px solid #1a2c5f;
+  border-radius: 15px 15px 0px 0px;
+  color: white;
+  font-size: 16px;
+  height: 35px;
+}
+
+#list .wrap .box2 {
+  height: auto;
+  border-radius: 0px 0px 10px 10px;
+  border-bottom: 1px solid #cccccc;
+  border-right: 1px solid #cccccc;
+  border-left: 1px solid #cccccc;
+}
+
+#list .wrap .box1 .inner1,
+#list .wrap .box2 .inner1 {
+  width: 50px;
+}
+
+#list .wrap .box1 .inner2,
+#list .wrap .box2 .inner2 {
+  width: 80px;
+}
+
+#list .wrap .box1 .inner3,
+#list .wrap .box2 .inner3 {
+  width: 440px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+#list .wrap .box1 .inner4,
+#list .wrap .box2 .inner4 {
+  width: 200px;
+}
+
+#list .wrap .box2 .box2Inner {
+  border-bottom: 1px solid #cccccc;
+}
+
+#list .wrap .box2 .box2Inner:last-child {
+  border-bottom: none;
+}
+
+#list .wrap .box3 {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+#list .wrap .box3 a,
+#list .wrap .box2 a,
+#write .formBox .inner5 a,
+#edit .formBox .inner5 a,
+#read .readBox .inner5 a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#list .wrap .box2 a:hover {
+  text-decoration: underline;
+}
+
+
+#list .wrap .box3 .inner2,
+#write .formBox .inner5 div,
+#edit .formBox .inner5 div,
+#read .readBox .inner5 div {
+  width: 70px;
+  height: 40px;
+  background-color: #1a2c5f;
+  border: 1px solid #1a2c5f;
+  border-radius: 15px;
+  text-align: center;
+  align-content: center;
+  color: white;
+}
+
+#list .wrap .box3 .inner1 button,
+#write .formBox .inner5 button,
+#edit .formBox .inner5 button,
+#read .readBox .inner5 button {
+  width: 72px;
+  height: 42px;
+  background-color: #1a2c5f;
+  border: 1px solid #1a2c5f;
+  border-radius: 15px;
+  text-align: center;
+  align-content: center;
+  color: white;
+  font: inherit;
+  cursor: pointer;
+}
+
+#list .wrap .box3 .inner1 button:hover,
+#list .wrap .box3 .inner2:hover,
+#write .formBox .inner5 div:hover,
+#write .formBox .inner5 button:hover,
+#edit .formBox .inner5 div:hover,
+#edit .formBox .inner5 button:hover,
+#read .readBox .inner5 div:hover,
+#read .readBox .inner5 button:hover {
+  background-color: white;
+  transition: background-color 0.3s;
+  color: #1a2c5f;
+  border: 1px solid #1a2c5f;
+}
+
+#list .wrap .pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+#list .wrap .pagination .change_page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  margin: 5px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  text-decoration: none;
+  color: inherit;
+}
+
+#list .wrap .pagination .change_page:hover {
+  cursor: pointer;
+}
+
+#list .wrap .pagination .now_page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  margin: 5px;
+  border-radius: 5px;
+  background: #1a2c5f;
+  border: 1px solid #1a2c5f;
+  color: #fff;
+}
+
+/* list */
+
+#write .formBox,
+#edit .formBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#read .readBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#write .formBox .inner1,
+#edit .formBox .inner1,
+#read .readBox .inner1 {
+  display: flex;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+#read .readBox .inner1,
+#read .readBox .inner4 {
+  width: 500px;
+}
+
+#write .formBox .inner1 div,
+#edit .formBox .inner1 div,
+#read .readBox .inner1 div {
+  margin-right: 15px;
+}
+
+#write .formBox .inner2 input,
+#edit .formBox .inner2 input,
+#read .readBox .inner2 .innerTitle {
+  width: 500px;
+  height: 48px;
+  margin-top: 5px;
+  padding: 0 10px;
+  border: 1px solid #ccc;
+  outline: none;
+  border-radius: 10px;
+  background: #fff;
+  line-height: 48px;
+  font-size: 18px;
+  box-sizing: border-box;
+  margin-bottom: 15px;
+}
+
+#write .formBox .inner3 textarea,
+#edit .formBox .inner3 textarea {
+  resize: none;
+  width: 500px;
+  height: 300px;
+  margin-top: 5px;
+  padding: 0 10px;
+  border: 1px solid #ccc;
+  outline: none;
+  border-radius: 10px;
+  background: #fff;
+  line-height: 28px;
+  font-size: 18px;
+  box-sizing: border-box;
+  margin-bottom: 15px;
+}
+
+#read .readBox .inner3 .innerContent {
+  width: 500px;
+  height: auto;
+  min-height: 300px;
+  margin-top: 5px;
+  padding: 0 10px;
+  border: 1px solid #ccc;
+  outline: none;
+  border-radius: 10px;
+  background: #fff;
+  line-height: 28px;
+  font-size: 18px;
+  box-sizing: border-box;
+  margin-bottom: 15px;
+}
+
+#read .readBox .inner3 .innerContent img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+#write .formBox .inner4 input,
+#edit .formBox .inner4 input {
+  width: 500px;
+  height: 48px;
+  margin-top: 5px;
+  padding: 0 10px;
+  border: 1px solid #ccc;
+  outline: none;
+  border-radius: 10px;
+  background: #fff;
+  line-height: 48px;
+  font-size: 15px;
+  box-sizing: border-box;
+  margin-bottom: 15px;
+}
+
+#write .formBox .inner4 .fileList,
+#edit .formBox .inner4 .fileList {
+  display: flex;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin-top: 5px;
+  padding: 5px;
+  margin-bottom: 15px;
+}
+
+#write .formBox .inner5,
+#edit .formBox .inner5 {
+  display: flex;
+  justify-content: space-between;
+}
+
+#read .readBox .inner5 {
+  width: 500px;
+  display: flex;
+  margin-top: 15px;
+  position: relative;
+}
+
+#read .readBox .inner5 .listBtn {
+  position: absolute;
+  left: 0px;
+}
+
+#read .readBox .inner5 .editBtn {
+  position: absolute;
+  right: 80px;
+}
+
+#read .readBox .inner5 .delBtn {
+  position: absolute;
+  right: 1px;
+}
+
+#list .wrap .box2 .box2Inner .inner3 button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: inherit;
+}
+
+#list {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+#list .modal {
+  position: absolute;
+}
+
+#read,
+#write {
+  background-color: white;
+  border: 1px solid #1a2c5f;
+}
+
+#edit {
+  background-color: white;
+}
+
+#read .closeBtn,
+#write .closeBtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+
+  #login .title,
+  #join .title,
+  #list .title,
+  #write .title,
+  #edit .title,
+  #read .title {
+    font-size: 30px;
+  }
+
+  #login p,
+  #join p,
+  #login .joinBtn,
+  #login .submitBtn,
+  #join .submitBtn,
+  #login form input,
+  #join form input,
+  #write .formBox .inner1,
+  #write .formBox .inner2,
+  #write .formBox .inner3,
+  #write .formBox .inner4,
+  #edit .formBox .inner1,
+  #edit .formBox .inner2,
+  #edit .formBox .inner3,
+  #edit .formBox .inner4,
+  #read .readBox .inner1,
+  #read .readBox .inner2,
+  #read .readBox .inner3,
+  #read .readBox .inner4,
+  #read .readBox .inner5,
+  #list .wrap .box3 .inner1 button,
+  #list .wrap .box3 .inner2,
+  #list .wrap .box2 .noList {
+    font-size: 14px;
+  }
+
+  #read .readBox .inner2 .innerTitle,
+  #read .readBox .inner3 .innerContent {
+    font-size: 14px;
+  }
+
+  #read .readBox .inner2 .innerTitle {
+    overflow: hidden;
+  }
+
+
+  #login .wrap,
+  #join .wrap {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  #list,
+  #write,
+  #edit,
+  #read {
+    min-height: 660px;
+  }
+
+  #write .formBox .inner2 input,
+  #edit .formBox .inner2 input,
+  #write .formBox .inner3 textarea,
+  #edit .formBox .inner3 textarea,
+  #write .formBox .inner4 input,
+  #edit .formBox .inner4 input,
+  #write .formBox .inner4 .fileList,
+  #edit .formBox .inner4 .fileList {
+    width: 325px;
+    font-size: 14px;
+  }
+
+  #write .formBox .inner5,
+  #edit .formBox .inner5,
+  #read .readBox .inner1,
+  #read .readBox .inner4,
+  #read .readBox .inner2 .innerTitle,
+  #read .readBox .inner3 .innerContent,
+  #read .readBox .inner5 {
+    width: 325px;
+  }
+
+  #list .wrap {
+    width: 325px;
+  }
+
+  #list .wrap .top {
+    height: 25px;
+  }
+
+  #list .wrap .top,
+  #list .wrap .userInfo {
+    width: 325px;
+    font-size: 14px;
+  }
+
+  #list .wrap .box1,
+  #list .wrap .box2 {
+    width: 325px;
+  }
+
+  #list .wrap .box1 .inner1,
+  #list .wrap .box2 .inner1 {
+    width: 38px;
+    font-size: 14px;
+    display: none;
+  }
+
+  #list .wrap .box1 .inner2,
+  #list .wrap .box2 .inner2 {
+    width: 40px;
+    font-size: 14px;
+    display: none;
+  }
+
+  #list .wrap .box1 .inner3,
+  #list .wrap .box2 .inner3 {
+    width: 320px;
+    font-size: 14px;
+  }
+
+  #list .wrap .box1 .inner4,
+  #list .wrap .box2 .inner4 {
+    display: none;
+  }
+
+  #list .wrap .pagination .change_page,
+  #list .wrap .pagination .now_page {
+    width: 20px;
+    height: 25px;
+  }
+
+  #list .wrap .box3 .inner1 button,
+  #list .wrap .box3 .inner2,
+  #write .formBox .inner5 div,
+  #write .formBox .inner5 button,
+  #edit .formBox .inner5 div,
+  #edit .formBox .inner5 button,
+  #read .readBox .inner5 div,
+  #read .readBox .inner5 button {
+    width: 50px;
+    height: 32px;
+  }
+
+  #read .readBox .inner5 .editBtn {
+    right: 60px;
+  }
+
+  #write .formBox .inner4 .fileList,
+  #edit .formBox .inner4 .fileList {
+    overflow: hidden;
+    white-space: nowrap;
+    flex-direction: column;
+  }
+
+  #read,
+  #edit,
+  #write {
+    border: none;
+    width: 330px;
+  }
+
+  #read .closeBtn,
+  #write .closeBtn {
+    font-size: 30px;
+  }
+
+}
