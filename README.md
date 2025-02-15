@@ -5,14 +5,11 @@
 개발 환경: Visual Studio Code (VSC) <br/>
 
 
-## node_modules
+## 실행 가이드
 
-npm install react@18 react-dom@18 <br/>
-npm i web-vitals <br/>
-npm i react-router-dom <br/>
-npm i axios <br/>
-npm i jwt-decode <br/>
-npm i base-64 <br/>
+1. git clone <br/>
+2. npm i (터미널에서) <br/>
+3. npm start <br/>
 
 ### sample_id
 
