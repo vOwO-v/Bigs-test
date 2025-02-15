@@ -35,7 +35,6 @@ const Read = ({ id, handleCloseModal }) => {
             console.error("게시글 조회에 실패했습니다.", error);
             setLoading(false);
             alert('게시글을 불러오는 데 실패했습니다.');
-            navigate('/');
         }
     };
 
@@ -67,8 +66,7 @@ const Read = ({ id, handleCloseModal }) => {
                 
             } catch (error) {
                 console.error("게시글 삭제에 실패했습니다.", error);
-                alert('게시글을 삭제하는 데 실패했습니다.');
-                navigate('/');
+                alert('게시글 삭제에 실패했습니다.');
             }
         } else {
 

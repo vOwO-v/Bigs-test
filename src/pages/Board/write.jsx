@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import axios from 'axios';
 import { useState, useEffect } from "react";
 
-const Write = ({handleCloseWrite}) => {
+const Write = ({ handleCloseWrite }) => {
 
     const [title, setTitle] = useState('');
     const [content, setContent] = useState('');
@@ -80,8 +80,11 @@ const Write = ({handleCloseWrite}) => {
         } catch (error) {
             console.error('Error posting data:', error);
 
-            alert('게시글 작성 실패');
-            navigate('/');
+            if (error.response && error.response.data.message.includes("MaxUploadSizeExceededException")) {
+                alert('파일 용량이 초과되었습니다');
+            } else {
+                alert('게시글 작성 실패');
+            }
         }
     };
 

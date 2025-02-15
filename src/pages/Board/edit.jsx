@@ -42,7 +42,6 @@ const Edit = ({ id, closeEditModal }) => {
             } catch (error) {
 
                 alert('게시글을 불러오는 데 실패했습니다.');
-                navigate(`/`);
             }
         };
 
@@ -110,8 +109,12 @@ const Edit = ({ id, closeEditModal }) => {
 
         } catch (error) {
             console.error('Error posting data:', error);
-            alert('게시글 수정 실패');
-            closeEditModal();
+            
+            if (error.response && error.response.data.message.includes("MaxUploadSizeExceededException")) {
+                alert('파일 용량이 초과되었습니다');
+            } else {
+                alert('게시글 수정 실패');
+            }
         }
     };
 
